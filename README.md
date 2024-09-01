@@ -24,7 +24,6 @@ for i in range(len(arreglo_bidim)):  # Iterar sobre las filas
 
 
 #Programa 2: Ordenación de Arreglo Multidimensional
-# Definición de la matriz bidimensional (3x3)
 
 matriz = [
     [29, 15, 8],
@@ -40,15 +39,15 @@ def bubble_sort_fila(matriz, fila):
                 # Intercambia los elementos si están en el orden incorrecto
                 matriz[fila][j], matriz[fila][j+1] = matriz[fila][j+1], matriz[fila][j]
 
-# Mostrar la matriz original
+
 print("Matriz original:")
 for fila in matriz:
     print(fila)
 
-# Ordenar la segunda fila (índice 1) en orden ascendente
+
 bubble_sort_fila(matriz, 1)
 
-# Mostrar la matriz con la fila ordenada
+
 print("\nMatriz con la segunda fila ordenada:")
 for fila in matriz:
     print(fila)
