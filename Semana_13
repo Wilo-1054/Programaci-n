@@ -1,0 +1,40 @@
+# Ciudades (3 ciudades), Semanas (4 semanas), Días de la semana (7 días)
+arreglo_temperatura = [
+    [  # Quito
+        [16, 18, 20, 14, 19, 18, 22],  # Semana 1
+        [19, 18, 22, 16, 18, 20, 14],  # Semana 2
+        [16, 18, 20, 14, 19, 18, 22],  # Semana 3
+        [19, 18, 22, 16, 18, 20, 14]  # Semana 4
+    ],
+    [  # Cuenca
+        [20, 22, 24, 18, 23, 22, 20],  # Semana 1
+        [21, 20, 24, 18, 20, 22, 16],  # Semana 2
+        [20, 22, 24, 18, 23, 22, 20],  # Semana 3
+        [21, 20, 24, 18, 20, 22, 16]  # Semana 4
+    ],
+    [  # Santo Domingo
+        [27, 29, 28, 31, 28, 27, 28],  # Semana 1
+        [30, 28, 31, 28, 30, 28, 27],  # Semana 2
+        [27, 29, 28, 31, 28, 27, 28],  # Semana 3
+        [30, 28, 31, 28, 30, 28, 27]  # Semana 4
+    ]
+]
+
+
+def promedio_temperatura(parm_temperaturas, ciudad, semana):
+    acumulador_temperaturas = 0
+
+    for temperatura in range(len(parm_temperaturas[ciudad][semana])):
+        acumulador_temperaturas += parm_temperaturas[ciudad][semana][temperatura]
+
+    promedio_temperatura = acumulador_temperaturas / len(parm_temperaturas[ciudad][semana])
+    return promedio_temperatura
+
+
+# Definir ciudad y semana
+ciudad_0 = 0  # Quito (índice 0)
+semana_2 = 1  # Semana 2 (índice 1)
+
+# Calcular el promedio
+result_promedio = promedio_temperatura(arreglo_temperatura, ciudad_0, semana_2)
+print(result_promedio)
